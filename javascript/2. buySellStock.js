@@ -8,7 +8,7 @@
 
 // Solution:
 
-const maxProfit = function(prices) {
+const maxProfit = prices => {
   let profit = 0;
   let min = prices[0]
   for(let i =1;i<prices.length;i++){
