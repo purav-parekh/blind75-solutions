@@ -1,0 +1,22 @@
+// calculate total length of list
+// find diff of total length and n
+// iterate and point pointer to next node
+
+const removeNth = (head,n) => {
+  if(!head) return head
+  let len = 0
+  let curr = head 
+  while(curr) {
+    len += 1
+    curr = curr.next
+  }
+  let target = len - n
+  if(target === 0) return head.next
+  curr = head
+  while(target > 1) {
+    curr = curr.next
+    target--
+  }
+  curr.next = curr.next.next
+  return head
+}
